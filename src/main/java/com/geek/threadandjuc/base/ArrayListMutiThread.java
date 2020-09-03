@@ -17,7 +17,7 @@ public class ArrayListMutiThread {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(new AddThread());
         Thread t2 = new Thread(new AddThread());
-    t1.start();t2.start();t1.join();t2.join();
+        t1.start();t2.start();t1.join();t2.join();
         System.out.println(al.size());
     }
 }

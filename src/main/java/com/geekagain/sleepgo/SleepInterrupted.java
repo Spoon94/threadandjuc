@@ -16,6 +16,11 @@ public class SleepInterrupted implements Runnable{
         thread.start();
         Thread.sleep(6500);
         thread.interrupt();
+        int a=10;
+        while (a!=0){
+
+        }
+        System.out.println(thread.isInterrupted());
     }
 
     @Override
@@ -25,8 +30,9 @@ public class SleepInterrupted implements Runnable{
             try {
                 TimeUnit.SECONDS.sleep(3);
             } catch (InterruptedException e) {
+                System.out.println("中断标志位"+Thread.currentThread().isInterrupted());
                 System.out.println("被中断了 菜逼");
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
     }
