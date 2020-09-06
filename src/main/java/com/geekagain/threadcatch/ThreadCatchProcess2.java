@@ -8,9 +8,9 @@ public class ThreadCatchProcess2 implements Runnable {
 
     public static void main(String[] args) {
         new Thread(new ThreadCatchProcess2()).start();
-        if(true){
-            throw new RuntimeException("我来抛出异常 看看对别人有影响没!");
-        }
+//        if(true){
+//            throw new RuntimeException("我来抛出异常 看看对别人有影响没!");
+//        }
 
         for (int i = 0; i < 10000; i++) {
             System.out.println(i);

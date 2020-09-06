@@ -18,7 +18,7 @@ public class VolatileExample  {
         if(flag){
             //4
             int i = a;
-            System.out.println("我能感知到！");
+            System.out.println("我能感知到！"+i);
         }
     }
 

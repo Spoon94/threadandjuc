@@ -36,6 +36,7 @@ public class ThreadStateChange2 implements Runnable {
         }
         //打印出WAITING状态，因为执行了wait()
         System.out.println(thread1.getState());
+        System.out.println(thread2.getState());
 
     }
 
@@ -47,7 +48,9 @@ public class ThreadStateChange2 implements Runnable {
                 // Thread.sleep(2000);
                 // Nanos toNanos 时间
                 LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(2));
+                this.notifyAll();
                 wait();
+                this.notifyAll();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

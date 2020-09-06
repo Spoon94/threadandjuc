@@ -22,6 +22,7 @@ public class RightWayStopThreadWithSleepEveryLoop {
                             System.out.println(num+" we is  100 multiple");
                         }
                         num++;
+                        Thread.currentThread().interrupt();
                         Thread.sleep(10);
                     }
                 } catch (InterruptedException e) {

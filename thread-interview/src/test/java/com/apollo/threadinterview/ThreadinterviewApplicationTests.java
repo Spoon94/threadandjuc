@@ -2,15 +2,11 @@ package com.apollo.threadinterview;
 
 import com.apollo.threadinterview.threadbase.RunnableStyle;
 import com.apollo.threadinterview.threadbase.ThreadStyle;
-import javafx.concurrent.Task;
-import lombok.extern.slf4j.Slf4j;
-import net.minidev.json.JSONAwareEx;
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 @Slf4j

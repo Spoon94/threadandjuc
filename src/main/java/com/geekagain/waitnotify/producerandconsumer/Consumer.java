@@ -18,6 +18,7 @@ public class Consumer extends Thread {
     }
 
     // 线程run函数
+    @Override
     public void run() {
         consume(num);
     }

@@ -7,8 +7,8 @@ public class ThreadCatchProcess implements Runnable {
 
 
     public static void main(String[] args)  throws InterruptedException {
-//        noTryCatch();
-        tryCatch();
+        noTryCatch();
+//        tryCatch();
     }
     public static void noTryCatch() throws InterruptedException {
         new Thread(new ThreadCatchProcess(), "MyThread-1").start();

@@ -20,8 +20,9 @@ public class CopyOnWriteArrayListDemo2 {
         System.out.println(list);
 
         Iterator<Integer> itr2 = list.iterator();
-
+        System.out.println("iter1");
         itr1.forEachRemaining(System.out::println);
+        System.out.println("iter2");
         itr2.forEachRemaining(System.out::println);
 
     }

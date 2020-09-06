@@ -12,6 +12,7 @@ public class RigihtWayDealMethodException implements Runnable {
                 throwExceptionInMethod();
             } catch (InterruptedException e) {
                 System.out.println("停止程序");
+                Thread.currentThread().interrupt();
                 break;
             }
         }

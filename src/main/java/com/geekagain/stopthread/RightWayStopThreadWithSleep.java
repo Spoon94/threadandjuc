@@ -12,8 +12,9 @@ public class RightWayStopThreadWithSleep {
                 while(!Thread.currentThread().isInterrupted()){
                     System.out.println("再有sleep的情况下 中断线程了");
                 }
+                System.out.println(" current thread is interrupted:"+ Thread.interrupted());
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

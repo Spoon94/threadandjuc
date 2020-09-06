@@ -31,9 +31,9 @@ public class ThreadSafeError3 implements Runnable {
         System.out.println("真正运行的次数  ： " + realIndex.get());
         System.out.println("错误次数  ： " + wrongCount.get());
 
-        for (; ; ) {
-            ;
-        }
+//        for (; ; ) {
+//            ;
+//        }
     }
 
     @Override

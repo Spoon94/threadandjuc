@@ -31,7 +31,7 @@ public class ThreadSafeError9 {
 
     public static void main(String[] args) throws InterruptedException {
         ThreadSafeError9 multiThreadsError9 = new ThreadSafeError9();
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         System.out.println(multiThreadsError9.getStates().get("1"));
     }
 }

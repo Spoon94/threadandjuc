@@ -1,8 +1,5 @@
 package com.geekagain.threadsafe;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author 邱润泽 bullock 逸出问题
  *
@@ -13,8 +10,8 @@ public class ThreadSafeError7 {
 
     public static void main(String[] args) throws InterruptedException {
         new PointMaker().start();
-//        Thread.sleep(10);
-        Thread.sleep(105);
+        Thread.sleep(10);
+//        Thread.sleep(105);
         if (point != null) {
             System.out.println(point);
         }

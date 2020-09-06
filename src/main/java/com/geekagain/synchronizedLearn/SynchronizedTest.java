@@ -1,8 +1,5 @@
 package com.geekagain.synchronizedLearn;
 
-import org.springframework.objenesis.instantiator.sun.UnsafeFactoryInstantiator;
-import sun.misc.Unsafe;
-
 /**
  * @author 邱润泽 bullock
  */
@@ -13,6 +10,7 @@ public class SynchronizedTest {
     public String getName(){
 
         synchronized (object){
+
             System.out.println("我来测试一下！！！！！");
         }
         return "";
@@ -23,5 +21,6 @@ public class SynchronizedTest {
 
         SynchronizedTest test = new SynchronizedTest();
         test.getName();
+
     }
 }

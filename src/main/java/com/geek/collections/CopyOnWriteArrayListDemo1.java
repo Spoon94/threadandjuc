@@ -1,6 +1,5 @@
 package com.geek.collections;
 
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -10,8 +9,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CopyOnWriteArrayListDemo1 {
 
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-//        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
+//        ArrayList<String> list = new ArrayList<>();
+        CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>();
 
         list.add("1");
         list.add("2");
@@ -22,7 +21,7 @@ public class CopyOnWriteArrayListDemo1 {
         Iterator<String> iterator = list.iterator();
 
         while (iterator.hasNext()) {
-            System.out.println("list is" + list);
+            System.out.println("list is" +list.hashCode() + list);
             String next = iterator.next();
             System.out.println(next);
 

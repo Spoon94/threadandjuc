@@ -8,6 +8,12 @@ public class SingletonDemo {
     private static volatile SingletonDemo instance = null;
 
     private SingletonDemo() {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt();
+        }
         System.out.println(Thread.currentThread().getName() + "\t 我是构造方法SingletonDemo");
     }
 
@@ -27,9 +33,9 @@ public class SingletonDemo {
     }
 
     public static void main(String[] args) {
-        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
-        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
-        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
+//        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
+//        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
+//        System.out.println(SingletonDemo.getInstance() == SingletonDemo.getInstance());
         for (int i = 1; i <= 100; i++) {
             new Thread(() -> {
                 SingletonDemo.getInstance();
